@@ -20,9 +20,12 @@ const Home = ({ title, rows }) => {
           ${rows
             .map(
               (row) => /*html*/ `
-              <li>${xss(row.todo)} <button onclick="app.delete(${
-                row.id
-              })">X</button></li>
+              <li>
+                ${xss(row.todo)} 
+                <div>
+                  <button onclick="app.delete(${row.id})">X</button>
+                </div>
+              </li>
             `
             )
             .join("")}
